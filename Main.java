@@ -20,6 +20,8 @@ public class Main {
            System.out.println(firstNum + " % " + secondNum + " = " + (firstNum % secondNum));
        }catch(InputMismatchException e){
            System.out.println("there is a mismatch "+ e.getMessage());
+       }catch (ArithmeticException e) {
+           System.out.println(e.getMessage());
        } catch (Exception e) {
            System.out.println(e.getMessage());
        }
@@ -129,7 +131,9 @@ public class Main {
            System.out.println(words.charAt(index));
        } catch (InputMismatchException e) {
            System.out.println("there is a mismatch " + e.getMessage());
-       } catch (Exception e) {
+       }catch(StringIndexOutOfBoundsException e) {
+           System.out.println(e.getMessage());
+       }catch (Exception e) {
            System.out.println(e.getMessage());
        }
 
